@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 100%;
+            height: 300px;
+            background-color: cadetblue;
+        }
+/* 需求:
+w<768 子元素宽度为父元素宽度100%
+w 768~992  每一行放置两个子元素
+w 992~1200 每一行放置三个子元素
+w >1200 每一行放置四个子元素
+ */
+        .box > div {
+            width: 100%;
+            height: 100%;
+            border: 1px solid lightpink;
+            background: powderblue;
+            border-bottom-color: blueviolet;
+            float: left;
+            border-right-color: blueviolet;
+            box-sizing: border-box;
+        }
+        
+        @media screen and (min-width:768px){
+           .box > div{
+            width: 50%;
+           }
+        }
+        @media screen and (min-width:992px){
+            .box > div {
+                width: 33.3%;
+            }
+        }
+        @media screen and (min-width:1200px){
+           .box > div {
+            width: 25%;
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 当判断最小值，并且总小到大进行判断（当满足条件的时候）;
+        1.向上兼容：如果设置了宽度更小时的样式，默认这些样式也会传到更大的条件范围内
+        2.向下覆盖：宽度更大额样式会将前面宽度更小的样式覆盖
+         */
+
+         /* 书写建议：
+         1.如果是判断最小值，那么就应该从小到大写
+         bootsrap就是判断最小值，从小到大写
+         2.如果死判断最大值就应该从大到小写
+          */
+        body {
+            background: black;
+        }
+
+        /* w<768 red max-width:768px; : 屏幕宽度小于等于768*/
+        @media screen and (max-width:768px) {
+            body {
+                background: red;
+            }
+        }
+        /*  w:768~992 gree min-width:768px:p屏幕的宽度大于768px */
+        @media screen and (min-width:768px) {
+            body{
+                background: palegreen;
+            }
+        }
+        @media screen and (min-width:992px){
+            body{
+                background: cadetblue;
+            }
+        }
+        @media screen and (min-width:1200px){
+            body{
+                background: chocolate;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--    
+    w<768 red
+    w:768~992 green
+    w:992!1200 blue
+    w>1200 pink--->
+
+</body>
+
+</html>
